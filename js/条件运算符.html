@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+            条件运算符也叫三元运算符
+                语法；
+                    条件表达式?语句1:语句2;
+                执行流程；
+                    条件运算符在执行时，首先对条件表达式进行求值
+                    如果为true，则执行语句1，并返回执行结果
+                    如果为false，则执行语句2，并返回执行结果
+        */
+
+        var a = 1, b = 1, C = 1;
+
+        a == b ? alert("ab值相等") : alert("ab值不相等");
+
+        // 三目运算符可以嵌套使用，但不推荐使用，不方便阅读
+        var max = a > b ? a > c ? a : c : b > c ? b : c;
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
