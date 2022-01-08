@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+            要求：
+                根据下述条件判断是否结婚
+                    高；180cm以上;财富；100万以上;颜值；50分以上
+                    如果同时满足三个条件，则“一定结婚”
+                    如果三个条件有为真的情况，则“可以结婚，比上不足，比下有余”
+                    如果三个条件都不满足，则“不结婚”
+        */
+
+        var height = prompt("请输入身高(单位:cm):");
+        var wealth = prompt("请输入财富(单位:万元):");
+        var faceValue = prompt("请输入颜值(单位:100分制):");
+
+        if(height >= 180 &&  wealth >= 100 && faceValue >= 50)
+        {
+            alert("一定要结婚");                                                                                                                                                                                                                                                                     
+        }else if(height >= 180 ||  wealth >= 100 || faceValue >= 50)
+        {
+            alert("可以结婚，比上不足，比下有余");
+        }else
+        {
+            alert("不结婚");
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

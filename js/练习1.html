@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+            要求：
+                从键盘输入小明的期末成绩
+                    当成绩为100时，奖励一台汽车
+                    当成绩为80-99时，奖励一部手机
+                    当成绩为60-79时，奖励一本参考书
+                    当成绩为60以下时，没有奖励
+        */
+
+        var achievement = prompt("请输入小明的期末成绩:");
+
+        if(achievement == 100)
+        {
+            alert("奖励小明一台汽车");
+        }else if(achievement >= 80 && achievement <= 99.99)
+        {
+            alert("奖励小明一部手机");
+        }else if(achievement >= 60 && achievement <= 79.99)
+        {
+            alert("奖励小明一本参考书");
+        }else if(achievement < 60)
+        {
+            alert("抱歉，没有奖励");
+        }else
+        {
+            alert("请输入正确格式，0-100之间的数字");
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
