@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+            要求
+                从键盘输入成绩，并接收
+                    对于成绩大于等于60，则输出合格
+                    低于60，则输出不合格
+                用switch语句实现
+        */
+
+        var i = prompt("请输入成绩:");
+
+        // switch(parseInt(i/10))
+        // {
+        //     case 10:
+        //         alert("合格");
+        //         break;
+        //     case 9:
+        //         alert("合格");
+        //         break;
+        //     case 8:
+        //         alert("合格");
+        //         break;
+        //     case 7:
+        //         alert("合格");
+        //         break;
+        //     case 6:
+        //         alert("合格");
+        //         break;
+        //     case 5:
+        //         alert("不合格");
+        //         break;
+        //     case 4:
+        //         alert("不合格");
+        //         break;
+        //     case 3:
+        //         alert("不合格");
+        //         break;
+        //     case 2:
+        //         alert("不合格");
+        //         break;
+        //     case 1:
+        //         alert("不合格");
+        //         break;
+        //     case 0:
+        //         alert("不合格");
+        //         break;
+        //     default:
+        //         alert("成绩无效");
+        // }
+
+        switch(true)
+        {
+            case i >= 60 && i <= 100:
+                alert("合格");
+                break;
+            case i < 60:
+                alert("不合格");
+                break;
+            default:
+                alert("成绩无效");
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

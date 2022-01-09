@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    /*
+        条件分支语句
+            语法：swutch(条件表达式)
+                    {
+                        case 表达式:
+                            语句
+                            break
+                        case 表达式:
+                            语句
+                            break
+                        case 表达式:
+                            语句
+                            break
+                        case 表达式:
+                            语句
+                            break
+                        case 表达式:
+                            语句
+                            break
+                        default:
+                            语句
+                            break;
+                    }
+            在执行时会依次将case后的表达式的值和switch后的条件表达式的值进行全等比较
+                如果比较结果为true，则从当前case处开始执行代码，但不会停止判断，而会继续向下执行
+                    可以使用break语句停止switch，
+                如果比较结果为false，则继续向下比较
+            default写在switch语句的最后，一旦都是上面case的比较结果都不为true时触发的操作
+                类似if语句的else
+
+    */
+
+        var i = 2;
+
+        switch(i)
+        {
+            case 1:
+                alert("1");
+                break
+            case 2:
+                alert("2");
+                break
+        }
+
+    </script>
+    
+
+</head>
+<body>
+    
+</body>
+</html>

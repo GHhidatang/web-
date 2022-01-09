@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            循环语句
+                通过循环语句可以反复执行一段代码多次
+
+                while
+                    语法
+                        while(条件表达式)
+                        {
+                            语句
+                        }
+                    在执行的时候，先对条件表达式求值判断
+                        如果结果为true，则执行循环体中的语句
+                        执行完毕后，又会继续对表达式进行判断
+                        如果还是为true，则继续执行循环语句，以此类推
+                        直到条件表达式为false，才会跳出循环语句
+
+                do...while
+                        语法
+                            do
+                            {
+                                语句
+                            }while(条件表达式)
+                        do...while与while相差不大
+                        但do...while是执行语句，再进行判断
+                        while则是先判断再执行
+                        do...while至少会执行一次语句
+                        而while则不行
+        */
+
+       var i = 10;
+       var n = 10;
+       
+        while(i--)
+        {
+            alert(i);
+        }
+
+        do
+        {
+            alert(n);
+        }while(n--)
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
