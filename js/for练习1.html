@@ -7,20 +7,22 @@
     <title>Document</title>
 
     <script>
+
         /*
-            假如投资的年利润为5%，求从1000块涨到5000块，需要花费多少年
+            打印1-100之间所有的奇数之和
         */
 
-        var i = 1000;
-        var n = 0;
+        var i, n = 0;
 
-        while(i != 5000)
+        for(i=1; i<=100; i++)
         {
-            i *= 1.05;
-            n++;
+            if(i%2 != 0)
+            {
+                n = n +i;
+            }
         }
 
-        console.log("一共需要" + n + "年");
+        alert(n);
 
     </script>
 

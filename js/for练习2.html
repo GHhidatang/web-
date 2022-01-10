@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        /*
+            打印三位数以内所有的水仙花数
+                水仙花数是指一个三位数，他的每个位上的数字的3次幂之和等于它本身
+                (列如；1^3 + 5^3 + 3^3 = 153)
+        */
+
+        var i = 100;
+        var ge = 0, shi = 0, bai = 0;
+
+        for(i; i<1000; i++)
+        {
+            bai = parseInt(i / 100);
+            shi = parseInt(i / 10) % 10;
+            ge = i % 10;
+            
+            if(bai * bai * bai + shi * shi * shi + ge * ge * ge == i)
+            {
+                console.log(i);
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

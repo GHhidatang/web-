@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            在页面中接收用户输入的数字，并判断该数是否是质数
+                质数；只能被1和自己本身整除的数字，1不是质数也不是合数，质数是必须大于1的自然数
+        */
+
+        var i = prompt("请输入一个大于1的自然数；");
+        var n = 2, t = 0;
+
+        if(i == 1)
+        {
+            alert("该值不是质数");
+        }else
+        {
+            for(var n = 2; n <= i; n++)
+            {
+                if(i % n == 0)
+                {
+                    t++;
+                }
+            }
+
+            if(t == 1)
+            {
+                alert(i + "是质数");
+            }else
+            {
+                alert(i + "不是质数");
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
