@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            for循环语句可以写在另一个for循环语句中，我们称之为for循环嵌套
+                语法
+                    for(;;)
+                    {
+                        for(;;)
+                        {
+                            
+                        }
+                    }
+            在里面的for循环可以看作外部for循环的语句
+            外部for循环每循环一次都会执行一次内部的for循环
+            每当执行到内部的for循环时，跟往常的for循环一样执行
+            直到执行完内部的for循环才会继续执行外部的for循环
+            结束条件是：是外部的for循环执行完毕
+        */
+
+        var i = 10;
+        var t = 10;
+
+        for(i; i>=0; i--)
+        {
+            for(t; t>=0; t--)
+            {
+                document.write("*");
+            }
+
+            document.write("*<br />");
+            t = t + i;
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

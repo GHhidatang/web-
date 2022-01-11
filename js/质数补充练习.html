@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+
+        /*
+            质数的补充练习
+        */
+
+        var num = prompt("请输入一个大于1的自然数；");
+
+        var fiag = ture;
+        var i = 2;
+
+        for(i; i<num; i++)
+        {
+            if(num % i == 0)
+            {
+                fiag = false;
+            }
+        }
+
+        if(fiag)
+        {
+            alert(num + "是质数");
+        }else
+        {
+            alert(num + "不是质数");
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
