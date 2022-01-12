@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            用for循环嵌套的方式打印99乘法表
+        */
+
+        var i = 1, n = 1, t = 1;
+
+        for(i; i<10; i++)
+        {
+            for(n; n<=i; n++)
+            {
+                t = i * n;
+                document.write(i + "*" + n + "=" + t + "&emsp;");
+            }
+            document.write("<br />");
+            n = 1;
+        }
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

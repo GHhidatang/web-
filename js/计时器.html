@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            console.time("计时器的名字");
+                可以用来开启一个计时器
+                他需要一个字符串作为参数，这个字符串将会作为计时器的标识
+                用console.timeEnd("计时器的名字");来停止一个计时器
+                在网页的控制台查看运行结果
+        */
+
+        console.time("aaa");
+
+        var i = 1;
+
+        for(i; i<=100000; i++)
+        {
+            document.write("*<br />");
+        }
+
+        console.timeEnd("aaa");
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
