@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            枚举对象中的属性
+            使用for...in语句，语法：
+                for(var 变量 in 对象)
+                {
+
+                }
+            for...in语句，对象中有几个属性，循环体就会执行几次
+                每次执行时，会将对象中的一个属性的名字赋值给变量
+        */
+
+        var obj = 
+        {
+            name:"孙悟空",
+            age:456
+        };
+
+        for(var n in obj)
+        {
+            console.log(n);
+
+            // 可以使用[]将变量包括进去，加上对象名，就可以枚举出所有属性的值
+            console.log(obj[n]);
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
