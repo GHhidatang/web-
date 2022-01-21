@@ -35,16 +35,41 @@
         // fun();
 
 
-        var obj2 = 
+        // var obj2 = 
+        // {
+        //     name = "孙悟空",
+        //     age = 456,
+        //     sayName = function()
+        //     {
+        //         console.log(obj.name);
+        //     }
+        // }
+
+        /*
+            使用工厂方法创建对象
+                通过该方法可以大批量的创建对象
+                使用工厂方法创建的对象，使用的构造函数都是Object
+                所以创建的对象都是Object这个类型的
+                就导致我们无法区分出不同的对象
+                这个时候就需要使用构造函数来解决
+        */
+
+        function fun(name, age)
         {
-            name = "孙悟空",
-            age = 456,
-            sayName = function()
+            var obj = new Object();
+            obj.name = name;
+            obj.age = age;
+            obj.say = function()
             {
-                console.log(obj.name);
-            }
-        }
+                alert(this.name);
+            };
+            return obj;
+        };
         
+        var obj2 = fun("猪八戒", 8);
+        var obj3 = fun("孙悟空", 10);
+
+        console.log(obj2);
 
     </script>
 
