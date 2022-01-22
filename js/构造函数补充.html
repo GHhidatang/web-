@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            在下方Per构造函数中，为每一个对象都添加了一个say方法
+                目前我们的方法是在函数内部创建的，也是构造函数每执行一次就会创建一个新的say方法
+                也就是说所有实例的say都是唯一的
+                这样就导致了构造函数执行一次就会创建一个新的say方法
+                执行多少次就会有多少个完全一样的say方法
+                这是完全没有必要的，完全可以使所有的对象共享同一个方法
+                将say方法在全局作用域中定义，就可以解决这个问题，但还是有不足，这个时候就需要用到原型了
+
+                以后我们创建构造函数时，可以将这些对象共有的属性和方法，统一添加到构造函数的原型对象中
+                    这样不用分别为每一个对象添加，也不会影响到全局作用域，就可以使每个对象都具有这些属性和方法
+        */
+
+        // 将say方法在全局作用域中定义
+        /*
+            将函数定义在去全局作用域，污染了全局域的命名空间
+            而且定义在全局作用域中也很不安全
+        */
+        // function fun()
+        // {
+        //     alert(this.name);
+        // }
+
+        // 向原型中添加say方法
+        Per.prototype.say = function()
+                            {
+                                alert(this.name);
+                            };
+
+        function Per(name, age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        var per = new Per("孙悟空", 10);
+
+        per.say();
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
