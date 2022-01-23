@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function Mc()
+        {
+
+        }
+
+        Mc.prototype.name = 123;
+
+        var mc = new Mc();
+
+        console.log(mc.name);
+
+        // 使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有，也会返回true
+        // console.log("name" in mc);
+
+        // 可以使用对象的hasOwnProperty()来检查对象自身中是否含有该属性
+        // 使用该方法只有对象自身中含有属性时，才会返回true
+        /*
+            原型对象也是对象，所以他也有原型
+                当我们使用一个对象的属性或方法时，会先在自身中寻找
+                    自身如果有，则直接使用
+                    没有的话则去原型对象中寻找，如果原型对象中有，则使用
+                    如果还是没有，则会去原型的原型中寻找，直到找到Object对象的原型
+                    Object对象的原型没有原型，如果在Object中依然没有找到，则返回undefined
+        */
+        console.log(mc.hasOwnProperty("name"));
+        console.log(mc.hasOwnProperty("hasOwnProperty"));
+        console.log(mc.__proto__.hasOwnProperty("hasOwnProperty"));
+        console.log(mc.__proto__.__proto__.hasOwnProperty("hasOwnProperty"));
+        
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

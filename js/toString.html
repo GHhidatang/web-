@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function Per(name, age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        // 修改Per原型的toString
+        Per.prototype.toString = function()
+        {
+            return "Per[name = " + this.name + ",age = " + this.age + "]";
+        }
+
+        var per = new Per("孙悟空", 10);
+
+        // 当我们直接在页面中打印一个对象时，事件上是输出的对象的toString()方法的返回值
+        // 如果我们希望在输出对象是不输出[object Object]，可以为对象添加剂一个toString()方法
+        // 如果需要我们也可以直接添加到构造函数的原型里面，这样更加节省空间和效率
+        // per.toString = function()
+        // {
+        //     return "我是一个Person";
+        // };
+        var res = per.toString();
+        // console.log(res);
+        console.log(res);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
