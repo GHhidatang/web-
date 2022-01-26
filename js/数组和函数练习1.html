@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function Per(name, age)
+        {
+            this.name = name;
+            this.age = age;
+        }
+
+        Per.prototype.toString = function()
+        {
+            return "name=" + this.name + ",age=" + age + ";";
+        }
+
+        var per = new Per("孙悟空", 10);
+        var per2 = new Per("沙和尚", 18);
+        var per3 = new Per("猪八戒", 20);
+        var per4 = new Per("蜘蛛精", 18);
+
+        var perarr = [per, per2, per3, per4];
+
+        /*
+            创建一个函数，可以将perarr中满18岁的per提取出来
+            然后封装到一个新的数组中并返回
+        */
+
+        function Ga(arr)
+        {
+            var newarr = [];
+
+            for(var i = 0; i < arr.length; i++)
+            {
+                if(arr[i].age >= 18)
+                {
+                    newarr[newarr.length] = arr[i];
+                    console.log(arr[i].name + "已满18岁");
+                }
+            }
+
+            return newarr;
+        }
+
+        var newarr = Ga(perarr);
+
+        console.log(newarr);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
