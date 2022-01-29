@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            在调用函数时，浏览器每次都会传递进两个隐含的参数
+                函数的上下文 this
+                封装实参的对象 arguments
+                    arguments是一个类数组对象，他也可以通过索来操作数据，也可以获取长度
+                    在调用函数时，我们所传递的实参都会在arguments中保存
+                    arguments.length可以用来获取实参的长度
+                    即使我们不定义形参，也可以通过arguments来使用实参，只不过比较麻烦
+                        arguments[0] 表示第一个实参
+                        arguments[1] 表示第二个实参
+                        依次类推
+        */
+
+        function fun()
+        {
+            console.log(arguments);
+            console.log(arguments.length);
+            console.log(arguments[0]);
+        }
+        fun(2, 6);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
