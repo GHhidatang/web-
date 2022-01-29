@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            检查一个数组的元素是否重复的，如果有，那么只留下一个，其余全部删除
+        */
+
+        var arr = [1, 2, 3, 4, 1, 2, 2, 2, 3, 3, 3, 5];
+        // var arr = new Array(1,2,2,3,3,4,4,2,3,4,6,7);
+
+        for(var i = 0; i < arr.length; i++)
+        {
+            for(var a = i + 1; a < arr.length; a++)
+            {
+                if(arr[i] == arr[a])
+                {
+                    var v = arr.splice(a, 1);
+                    console.log(v);
+                    a--;
+                }
+            }
+        }
+
+        // var arrToSet = new Set(arr);
+        // arr = Array.from(arrToSet);
+
+        console.log(arr);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
