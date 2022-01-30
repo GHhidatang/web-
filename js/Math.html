@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            Math
+                Math和其他对象不同，他不是一个构造函数
+                    它属于一个工具类不用创建，它里面封装了数学运算的相关属性和方法
+                比如
+                    Math.PI表示的是圆周率
+        */
+        // console.log(Math.PI);
+
+        /*
+            abs()
+                可以用来计算一个数的绝对值
+        */
+        // console.log(Math.abs(-19));
+
+        /*
+            ceil()
+                可以对一个数进行向上取整，小数位只有值就会自动进1
+            floor()
+                可以对一个数进行向下取整，小数位会被舍掉
+            round()
+                可以对一个数进行四舍五入运算，小数位的第一位>=5则进1，否则就舍掉全部小数位
+        */
+        // console.log(Math.ceil(1.4));
+        // console.log(Math.floor(1.4));
+        // console.log(Math.round(1.4));
+
+        /*
+            random()
+                可以用来0-1之间的随机数
+                生成一个0-y之间的随机数
+                    Math.random() * y;
+                生成一个x-y之间的随机数
+                    (Math.random() * (y - x)) + x; 
+                    
+        */
+        // console.log(Math.random());
+
+        /*
+            max()
+                可以获取多个数中的最大值
+            min()
+                可以获取多个数中的最小值
+        */
+        // var date = Math.max(10, 20, 15);
+        // var date2 = Math.min(10, 20, 15);
+        // console.log(date);
+        // console.log(date2);
+
+        /*
+            Math.pow(x, y)
+                返回x的y次幂
+        */
+        // console.log(Math.pow(2, 2));
+
+        /*
+            sqrt(x)
+                对x的开方运算
+        */
+        console.log(Math.sqrt(9));
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
