@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            正则表达式
+                正则表达式用于定义一些字符串的规则
+                    计算机可以根据正则表达式，来检查一个字符串是否符合规则
+                    将字符串中符合规则的内容提取出来
+                语法：
+                    var 变量 =  new RegExp("正则表达式", "匹配模式");
+                    第一个参数，正则表达式：
+                        用来检查一个字符串中是否含有本身，检查时也是严格区分大小写
+                    第二个参数，匹配模式：
+                        可选值可以是
+                            i 忽略大小写
+                            g 全局匹配模式
+                    使用typeof检查正则表达式时，会返回object
+                也可以使用字面量来创建正则表达式，语法：
+                    var 变量 = /正则表达式/匹配模式
+        */
+        // 使用构造函数创建正则表达式
+        // var reg = new RegExp("a", "i");
+        
+        // 使用字面量创建正则表达式
+        var reg = /a/i;
+
+        var str = "A";
+    
+        /*
+            正则表达式的方法：
+                test()
+                    使用这个方法可以用来检查一个字符串是否符合正则表达式
+                        如果符合则返回true，否则返回false
+        */
+        // console.log(reg.test(str));
+        // console.log(reg);
+
+        // 使用|表示或者的意思
+        // reg = /a|b/i;
+        
+
+        /*
+            []里面写的内容也是或的关系
+            [ab] == a|b
+            [a-z] 任意的小写字母
+            [A-Z] 任意的大写字母
+            [A-z] 任意的字母
+            [0-9] 任意的数字
+            [^ ] 只要有一个不是这里面的东西那都可以
+        */
+        // reg = /[ab]/i;
+        // console.log(reg.test("bhd"));
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
