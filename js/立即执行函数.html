@@ -22,6 +22,13 @@
             alert("我是一个匿名函数");
         })();
 
+        function b() { console.log('bbb') }
+
+        function a(b = function b() { console.log('aaa') }) {
+            b.apply();
+        } 
+
+        a(b)
     </script>
 
 </head>
