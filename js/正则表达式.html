@@ -29,9 +29,9 @@
         // var reg = new RegExp("a", "i");
         
         // 使用字面量创建正则表达式
-        var reg = /a/i;
+        // var reg = /a/i;
 
-        var str = "A";
+        // var str = "A";
     
         /*
             正则表达式的方法：
@@ -84,10 +84,38 @@
             如果在正则表达式中同时使用^和$则要求字符串必须完全符合正则表达式，可以加一个|来选择使用a开头或a结尾
                 就可以避免
         */
-        reg = /^a/; // 匹配开头的a
-        reg = /s$/; // 匹配结尾的s
-        reg = /^a|a$/;
-        console.log(reg.test("adfaa"));
+        // reg = /^a/; // 匹配开头的a
+        // reg = /s$/; // 匹配结尾的s
+        // reg = /^a|a$/;
+        // console.log(reg.test("adfaa"));
+
+        /*
+            "."表示任意字符
+                在正则表达式中使用\作为转义字符，\.来表示.
+
+            注意：使用构造函数时，由于他的参数是一个字符串，而\是字符串的转义字符
+                如果需要使用\则要用\\来代替
+
+            如果\后面加上某些字母，可能会有不同的意思
+                \w - 任意的字母数字和_ [A-z0-9_]
+                \W - 除了字母数字和_ [^A-z0-9_]
+                \d - 任意的数字 [0-9]
+                \D - 除了数字 [^0-9]
+                \s - 空格
+                \S - 除了空格
+                \b - 单词边界
+                \B - 除了单词边界
+        */
+        var reg = /\./;
+        var reg = /\w/;
+        var reg = /\W/;
+        var reg = /\d/;
+        var reg = /\D/;
+        var reg = /\s/;
+        var reg = /\S/;
+        var reg = /\basd\b/;
+        // var reg = /\B;
+        console.log(reg.test("123 asd f.ad"));
 
     </script>
 
