@@ -13,9 +13,9 @@
                 任意数字字母下划线加上点 + @ + 网站网址（任意字母数字）+ .com或者.cn（点后面可以是任意的字母）
         */
 
-        var regular = /^\w{3,}(\.\w+)*@[A-z0-9]+(\.[A-z]{2,5})(1,2)$/;
+        var regular = /^\w*@[0-9A-z]*\.[A-z]*$/;
 
-        console.log(regular.test("abc.hello@163.com"));
+        console.log(regulartest("abchello@16aa.com"));
 
     </script>
 
