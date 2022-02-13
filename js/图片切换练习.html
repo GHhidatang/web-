@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="picture" src="../img/直播封面1.jpg" alt="图片加载失败">
+
+    <button id="next">下一张</button>
+
+    <script>
+        var a = 0;
+        
+        var next = document.getElementById("next");
+        var picture = document.getElementById("picture");
+
+        next.onclick = function() {
+            if(a == 0) {
+                picture.src = "../img";
+                a++;
+            }else {
+                picture.src = "../img/直播封面1.jpg";
+                a--;
+            }
+        }
+
+    </script>
+</body>
+</html>
