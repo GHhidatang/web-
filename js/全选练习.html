@@ -9,10 +9,66 @@
     <script>
 
         window.onload = function() {
+            var checkedAllBox = document.getElementById("checkedAllBox");
+            var checkedAllBtn = document.getElementById("checkedAllBtn");
+            var items = document.getElementsByName("items");
+
+            /*
+                全选/全不选
+                    选择时所有选项都被选择，取消选择时所有选项都取消选择
+                    以及判断其余的四个选项是否全部被选择上，是则被选择，不是则取消选择
+            */
+            // items.onclick = function() {
+            //     var i = 0;
+            //     for(var t=0; t<items.length; t++) {
+            //         if(items[t].checked == false) {
+            //             i++;
+            //         }
+            //     }
+
+            //     if(i == items.length) {
+            //         checkedAllBox.checked = true;
+            //     }else {
+            //         checkedAllBox.checked = false;
+            //     }
+            // }
+
+            checkedAllBox.onclick = function() {
+                if(checkedAllBox.checked == true) {
+                    for(var i=0; i<items.length; i++) {
+                        items[i].checked = true;
+                    }
+                }else {
+                    for(var i=0; i<items.length; i++) {
+                        items[i].checked = false;
+                    }
+                }
+            }
+
             /*
                 全选按钮
-                    点击按钮以后，四个选项全部都被选中
+                    点击按钮以后，五个选项全部都被选中
             */
+            checkedAllBtn.onclick = function() {
+                checkedAllBox.checked = true;
+
+                for(var i=0; i<items.length; i++) {
+                    // 通过多选框的checked属性可以来获取或设置多选框的选中状态
+                    items[i].checked = true;
+                }
+            }
+
+            /*
+                全不选
+                    点击按钮以后，五个选项全部都不被选中
+            */
+            checkedNoBtn.onclick = function() {
+                checkedAllBox.checked = false;
+
+                for(var i=0; i<items.length; i++) {
+                    items[i].checked = false;
+                }
+            }
         }
 
     </script>
