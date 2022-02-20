@@ -11,6 +11,8 @@
         window.onload = function() {
             var checkedAllBox = document.getElementById("checkedAllBox");
             var checkedAllBtn = document.getElementById("checkedAllBtn");
+            var checkedNoBtn = document.getElementById("checkedNoBtn");
+            var checkedRevBtn = document.getElementById("checkedRevBtn");
             var items = document.getElementsByName("items");
 
             /*
@@ -67,6 +69,18 @@
 
                 for(var i=0; i<items.length; i++) {
                     items[i].checked = false;
+                }
+            }
+
+            /*
+                反选
+                    点击按钮后，四个选项的状态取反，例如：选中变为未选中
+            */
+            checkedRevBtn.onclick = function() {
+                var takeGlass = true;
+
+                for(var i=0; i<items.length; i++) {
+                    items[i].checked = !items[i].checked;
                 }
             }
         }
