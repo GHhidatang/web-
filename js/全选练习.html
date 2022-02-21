@@ -13,6 +13,7 @@
             var checkedAllBtn = document.getElementById("checkedAllBtn");
             var checkedNoBtn = document.getElementById("checkedNoBtn");
             var checkedRevBtn = document.getElementById("checkedRevBtn");
+            var shndBtn = document.getElementById("shndBtn");
             var items = document.getElementsByName("items");
 
             /*
@@ -20,20 +21,20 @@
                     选择时所有选项都被选择，取消选择时所有选项都取消选择
                     以及判断其余的四个选项是否全部被选择上，是则被选择，不是则取消选择
             */
-            // items.onclick = function() {
-            //     var i = 0;
-            //     for(var t=0; t<items.length; t++) {
-            //         if(items[t].checked == false) {
-            //             i++;
-            //         }
-            //     }
+            items.onclick = function() {
+                var i = 0;
+                for(var t=0; t<items.length; t++) {
+                    if(items[t].checked == false) {
+                        i++;
+                    }
+                }
 
-            //     if(i == items.length) {
-            //         checkedAllBox.checked = true;
-            //     }else {
-            //         checkedAllBox.checked = false;
-            //     }
-            // }
+                if(i == items.length) {
+                    checkedAllBox.checked = true;
+                }else {
+                    checkedAllBox.checked = false;
+                }
+            }
 
             checkedAllBox.onclick = function() {
                 if(checkedAllBox.checked == true) {
@@ -81,6 +82,24 @@
 
                 for(var i=0; i<items.length; i++) {
                     items[i].checked = !items[i].checked;
+                }
+            }
+
+            /*
+                提交
+                    点击按钮后，将四个选项中处于选中状态的选项给打印出来
+            */
+            shndBtn.onclick = function() {
+                var t = 0;
+                for(var i=0; i<items.length; i++) {
+                    if(items[i].checked == true) {
+                        alert(items[i].value);
+                    }else {
+                        t++;
+                    }
+                }
+                if(t == items.length) {
+                    alert("没有喜欢的运动");
                 }
             }
         }
