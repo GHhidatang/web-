@@ -17,34 +17,74 @@
             var items = document.getElementsByName("items");
 
             /*
-                全选/全不选
-                    选择时所有选项都被选择，取消选择时所有选项都取消选择
-                    以及判断其余的四个选项是否全部被选择上，是则被选择，不是则取消选择
+                记录页面中处于选中状态的选项的个数
             */
-            items.onclick = function() {
-                var i = 0;
-                for(var t=0; t<items.length; t++) {
-                    if(items[t].checked == false) {
-                        i++;
-                    }
-                }
+            var s = 0;
 
-                if(i == items.length) {
+            /*
+                判断页面中的四个选项的选中状态，全部都是选中则选中"全选/全不选"按钮
+            */
+            function select() {
+                if(s == items.length) {
                     checkedAllBox.checked = true;
                 }else {
                     checkedAllBox.checked = false;
                 }
             }
 
+            /*
+                全选/全不选
+                    选择时所有选项都被选择，取消选择时所有选项都取消选择
+                    以及判断其余的四个选项是否全部被选择上，是则被选择，不是则取消选择
+            */
+            // 通过foreach方法遍历选择框对象数组，用法自己百度
+            items.forEach(item=>{
+                // 拿到的每个对象就是item，给每个对象对加上点击监听事件
+                item.onclick = function(e){
+                    // 通过这个打印可以找到点击事件返回的e里面有我们点击目标的状态
+                    // (这个是经验，因为设计js的人肯定要让我们能知道监听事件是谁"触发"的,这个触发的人就是js返回给我们的这个e)
+                    console.log(e.target.checked);
+                    console.log(e);
+
+                    // 判断e.target.checked
+                    // 如果是true说明这次点击的结果是勾选上
+                    // 如果是false说明这次点击的结果是取消勾选
+                    if (e.target.checked) {
+                        // 当前点击勾选上了一个选择框，说明至少都有一个被勾选，所以把全选框选中没问题
+                        // checkedAllBox.checked = true;
+                        s++;
+                    }else {
+                        // 如果当前是取消勾选，就要判断一下我取消这个以后，其他还有没有是勾选状态的选择框
+                        // let num = 0;
+                        // items.forEach(it=>{
+                            // C语言学过 并(&&) 运算符噻？
+                            // 左边为false的时候会直接把右边短路(右边就不会执行)，所以利用这个特点就有下面这样的语句
+                        //     it.checked && num++;
+                        // })
+                        // if (num>0) {
+                            // 如果num>0说明现在还有选择框是被勾选了
+                        //     checkedAllBox.checked = true;
+                        // }else {
+                            // 否则说明现在没有选择框是勾选状态了，就取消勾选
+                        //     checkedAllBox.checked = false;
+                        // }
+                        s--;
+                    }
+                    select();
+                };
+            })
+
             checkedAllBox.onclick = function() {
                 if(checkedAllBox.checked == true) {
                     for(var i=0; i<items.length; i++) {
                         items[i].checked = true;
                     }
+                    s = 4;
                 }else {
                     for(var i=0; i<items.length; i++) {
                         items[i].checked = false;
                     }
+                    s = 0;
                 }
             }
 
@@ -59,6 +99,8 @@
                     // 通过多选框的checked属性可以来获取或设置多选框的选中状态
                     items[i].checked = true;
                 }
+
+                s = 4;
             }
 
             /*
@@ -71,6 +113,8 @@
                 for(var i=0; i<items.length; i++) {
                     items[i].checked = false;
                 }
+
+                s = 0;
             }
 
             /*
@@ -83,6 +127,9 @@
                 for(var i=0; i<items.length; i++) {
                     items[i].checked = !items[i].checked;
                 }
+
+                s = Math.abs(items.length - s);
+                select();
             }
 
             /*
